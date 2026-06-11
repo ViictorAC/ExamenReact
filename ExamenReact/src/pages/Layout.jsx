@@ -1,19 +1,27 @@
-import { Outlet } from 'react-router-dom'
-import Header from './Header'
-import Footer from './Footer'
+import { Outlet } from "react-router-dom";
+import Footer from "./Footer";
+import Header from "./Header";
 
-
-export const Layout = () => {
-    return (
+export default function Layout() {
+  
+  return (
     <>
-        <Header />
-            <main>
-                <Outlet />
-            </main>
-        <Footer />
+     <div className="tablon-wrap d-flex flex-column rounded-3 overflow-hidden border">
+
+      <Header />
+
+      <main>
+        <div className="tablon-board flex-grow-1 position-relative p-4">
+          <div className="tablon-cork" />
+
+        <Outlet />
+    
+      </div>
+      
+       </main>
+
+      <Footer />
+      </div>
     </>
-
-    )
+  );
 }
-
-export default Layout

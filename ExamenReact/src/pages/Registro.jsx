@@ -60,66 +60,69 @@ const Registro = () => {
   });
 
   return (
-    <>
-      <h1>Registrarse</h1>
-      <form onSubmit={formik.handleSubmit} noValidate>
-        <div className="">
-          <label htmlFor="text">Nombre de usuario</label>
-        </div>
-        <div className="">
-          <input
-            type="text"
-            name='name'
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-        </div>
-        <div className="">
-          {formik.touched.name && formik.errors.name && (
-            <span className="text-danger">{formik.errors.name}</span>
-          )}
-        </div>
-        <div className="">
-          <label htmlFor="email">Correo Electrónico</label>
-        </div>
-        <div className="">
-          <input
-            type="email"
-            name='email'
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-        </div>
-        <div className="">
-          {formik.touched.email && formik.errors.email && (
-            <span className="text-danger">{formik.errors.email}</span>
-          )}
-        </div>
-        <div className="">
-          <label htmlFor="password">Contraseña</label>
-        </div>
-        <div className="">
-          <input
-            type="password"
-            name='password'
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-        </div>
-        <div className="">
-          {formik.touched.password && formik.errors.password && (
-            <span className="text-danger">{formik.errors.password}</span>
-          )}
-        </div>
-        <p className='m-0 py-2 text-danger'>{error}</p>
-        <div className="">
-          <button type="submit" className='btn btn-dark'>Enviar</button>
-        </div>
-      </form>
-    </>
+    <div className="position-relative p-2 d-flex justify-content-center" style={{ zIndex: 1 }}>
+      <div>
+        <h1>Registrarse</h1>
+        <form onSubmit={formik.handleSubmit} noValidate>
+          <div className="">
+            <label htmlFor="text">Nombre de usuario</label>
+          </div>
+          <div className="">
+            <input
+              type="text"
+              name='name'
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+          <div className="">
+            {formik.touched.name && formik.errors.name && (
+              <span className="text-danger">{formik.errors.name}</span>
+            )}
+          </div>
+          <div className="">
+            <label htmlFor="email">Correo Electrónico</label>
+          </div>
+          <div className="">
+            <input
+              type="email"
+              name='email'
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+          <div className="">
+            {formik.touched.email && formik.errors.email && (
+              <span className="text-danger">{formik.errors.email}</span>
+            )}
+          </div>
+          <div className="">
+            <label htmlFor="password">Contraseña</label>
+          </div>
+          <div className="">
+            <input
+              type="password"
+              name='password'
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+          </div>
+          <div className="">
+            {formik.touched.password && formik.errors.password && (
+              <span className="text-danger">{formik.errors.password}</span>
+            )}
+          </div>
+          <p className='m-0 py-2 text-danger'>{error}</p>
+          <div className="">
+            <button type="submit" className='btn btn-dark'>Enviar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
   )
 }
 

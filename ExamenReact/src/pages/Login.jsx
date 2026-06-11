@@ -62,8 +62,9 @@ const Login = () => {
     });
 
     return (
-        <>
-            <h1>Inicio de sesión</h1>
+        <div className="position-relative p-2 d-flex justify-content-center" style={{ zIndex: 1 }}>
+            <div>
+                <h1>Inicio de sesión</h1>
             <form onSubmit={formik.handleSubmit} noValidate>
                 <div className="">
                     <label htmlFor="email">Correo Electrónico</label>
@@ -104,7 +105,8 @@ const Login = () => {
                     <button type="submit" className='btn btn-dark'>Enviar</button>
                 </div>
             </form>
-        </>
+            </div>
+        </div>
     )
 }
 

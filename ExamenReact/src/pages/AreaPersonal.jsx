@@ -11,17 +11,20 @@ const AreaPersonal = () => {
   }
 
   return (
-    <div>
-      <h1>Área Personal</h1>
-      {user && (
-        <div>
-          <p><strong>Nombre:</strong> {user.name}</p>
-          <p><strong>Email:</strong> {user.email}</p>
-        </div>
-      )}
-      <button onClick={handleLogout} className="btn btn-danger mt-2">
-        Cerrar sesión
-      </button>
+    <div className="position-relative p-2 d-flex justify-content-center" style={{ zIndex: 1 }}>
+      <div>
+        <h1>Área Personal</h1>
+        {user && (
+          <div>
+            <p><strong>Nombre:</strong> {user.name}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+          </div>
+        )}
+        <button onClick={handleLogout} className="btn btn-danger mt-2">
+          Cerrar sesión
+        </button>
+      </div>
+
     </div>
   )
 }
